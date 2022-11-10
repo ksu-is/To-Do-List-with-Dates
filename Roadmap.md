@@ -1,12 +1,12 @@
-#To Do List Project Roadmap 
-[x] Create Repository
-[x] Create ReadMe file
-[x] Create Project Roadmap
-[ ] Find related repository
-[ ] Test code to ensure it is similar to the planned project
-[ ] Evaluate related code to find what to use
-[ ] Begin work on project code using related code
-[ ] Learn and integrate how to save the state of the todo list
-[ ] Learn and integrate how to assign dates to tasks on the todo list
-[ ] Learn and integrate how to create a calendar selecter using Tkinter
-[ ] Review code and add additional features considered throughout the process
+# **To Do List Project Roadmap**
+- [x] Create Repository
+- [x] Create ReadMe file
+- [x] Create Project Roadmap
+- [ ] Find related repository
+- [ ] Test code to ensure it is similar to the planned project
+- [ ] Evaluate related code to find what to use
+- [ ] Begin work on project code using related code
+- [ ] Learn and integrate how to save the state of the todo list
+- [ ] Learn and integrate how to assign dates to tasks on the todo list
+- [ ] Learn and integrate how to create a calendar selecter using Tkinter
+- [ ] Review code and add additional features considered throughout the process
