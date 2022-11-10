@@ -2,8 +2,8 @@
 - [x] Create Repository
 - [x] Create ReadMe file
 - [x] Create Project Roadmap
-- [ ] Find related repository
-- [ ] Test code to ensure it is similar to the planned project
+- [x] Find related repository
+- [x] Test code to ensure it is similar to the planned project
 - [ ] Evaluate related code to find what to use
 - [ ] Begin work on project code using related code
 - [ ] Learn and integrate how to save the state of the todo list
