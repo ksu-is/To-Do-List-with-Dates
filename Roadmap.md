@@ -4,9 +4,10 @@
 - [x] Create Project Roadmap
 - [x] Find related repository
 - [x] Test code to ensure it is similar to the planned project
-- [ ] Evaluate related code to find what to use
-- [ ] Begin work on project code using related code
+- [x] Evaluate related code to find what to use
+- [x] Begin work on project code using related code
+- [x] Learn and integrate how to create a calendar selecter using Tkinter
+- [x] Learn and integrate how to assign dates to tasks on the todo list
+- [ ] Get Dates to sort with the tasks
 - [ ] Learn and integrate how to save the state of the todo list
-- [ ] Learn and integrate how to assign dates to tasks on the todo list
-- [ ] Learn and integrate how to create a calendar selecter using Tkinter
 - [ ] Review code and add additional features considered throughout the process
