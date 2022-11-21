@@ -7,9 +7,10 @@ from tkcalendar import Calendar, DateEntry
 root = tkinter.Tk()
 root.configure(bg = "White")
 root.title("ToDo List")
-root.geometry("350x400")
+root.geometry("400x350")
 #create emty list
 tasks = []
+dates = []
 
 def update_listbox():
     # clear the current listbox
@@ -17,12 +18,12 @@ def update_listbox():
     # Populate listbox by appending each task to list
     for task in tasks:
         lb_tasks.insert("end", task)
+    for date in dates:
+        lb_dates.insert("end", date)
 
 def clear_listbox():
     lb_tasks.delete(0, "end")
-
-
-    
+    lb_dates.delete(0,"end")
 
 def add_task(event=None): # "event=None" so that enter key can add task without clicking the button
     #get user input(prompt)
@@ -30,7 +31,7 @@ def add_task(event=None): # "event=None" so that enter key can add task without 
     # Ensure user has enetered a task
     if task !="":
       tasks.append(task)
-      tasks.append(cal.get_date())
+      dates.append(cal.get_date())
       update_listbox()
     else:
         messagebox.showwarning("Note!", "Please enter a task")
@@ -48,7 +49,8 @@ def delete_task():
     if task in tasks:
         confirm_del = messagebox.askyesno("Confirm Deletion", "Are you sure you want to delete task:   ** {} ** ?".format(task))
         if confirm_del:# tkmessageBox.askyesno returns boolean
-          tasks.remove(task)
+            del dates[tasks.index(task)]
+            tasks.remove(task)
     update_listbox()
 
 
@@ -69,6 +71,7 @@ def delete_all():
     if confirm_del:
       # Clear the tasks list.
       tasks = []
+      dates = []
       # Update listbox
       update_listbox()
 
@@ -90,9 +93,6 @@ txt_input.grid(row=1 , column=1 )
 btn_add_task = tkinter.Button(root, text="Add Task", fg="green", bg="white", command=add_task)
 btn_add_task.grid(row= 1, column=0 )
 
-cal = DateEntry(root, width= 12, background= "magenta3", foreground= "white",bd=2)
-cal.grid(row=1, column=3)
-
 btn_delete_task = tkinter.Button(root, text="Delete Task", fg="green", bg="white", command=delete_task)
 btn_delete_task.grid(row=4 , column=0 )
 
@@ -109,15 +109,14 @@ btn_quit_program = tkinter.Button(root, text="Exit", fg="green", bg="white", com
 btn_quit_program.grid(row=9 , column=0 )
 
 lb_tasks = tkinter.Listbox(root)
-lb_tasks.grid(row=2 , column=1, rowspan=7 )
+lb_tasks.grid(row=3 , column=1, rowspan=7 )
 
-#Populate listbox at program start for future file io functionality
-def show_listbox():
-    global tasks
-    for task in tasks:
-        lb_tasks.insert("end", task)
-#Populate listbox at program start for future file io functionality
-show_listbox()
+lb_dates = tkinter.Listbox(root)
+lb_dates.grid(row=3 , column=3, rowspan=7 )
+
+#Create calendar selector
+cal = DateEntry(root, width= 12, background= "magenta3", foreground= "white",bd=2)
+cal.grid(row=1, column=3)
 
 # Start the main events loop
 root.mainloop()
