@@ -8,7 +8,7 @@ root = tkinter.Tk()
 root.configure(bg = "SteelBlue4")
 root.title("ToDo List")
 root.geometry("400x350")
-#create emty list
+#create empty lists
 tasks = []
 dates = []
 
@@ -18,6 +18,7 @@ def update_listbox():
     # Populate listbox by appending each task to list
     for task in tasks:
         lb_tasks.insert("end", task)
+    # Populate listbox by appending dates to list
     for date in dates:
         lb_dates.insert("end", date)
 
@@ -31,6 +32,7 @@ def add_task(event=None): # "event=None" so that enter key can add task without 
     # Ensure user has enetered a task
     if task !="":
       tasks.append(task)
+      #capturing the date associated with entered task
       dates.append(cal.get_date())
       update_listbox()
     else:
@@ -49,6 +51,7 @@ def delete_task():
     if task in tasks:
         confirm_del = messagebox.askyesno("Confirm Deletion", "Are you sure you want to delete task:   ** {} ** ?".format(task))
         if confirm_del:# tkmessageBox.askyesno returns boolean
+            #deletes the date at the same index of the task
             del dates[tasks.index(task)]
             tasks.remove(task)
     update_listbox()
@@ -69,7 +72,7 @@ def delete_all():
     global tasks
     confirm_del = messagebox.askyesno("Delete All Confirmation", "Are you sure you want to delete all tasks?")
     if confirm_del:
-      # Clear the tasks list.
+      # Clears the lists.
       tasks = []
       dates = []
       # Update listbox
@@ -78,9 +81,7 @@ def delete_all():
 def exit():
     quit()
 
-root.bind('<Return>', add_task)
-
-# Create title in root widget of GUI with white background
+#Creating and formatting the GUI elemets
 
 txt_input = tkinter.Entry(root, width = 15)
 txt_input.grid(row=1 , column=1 )
