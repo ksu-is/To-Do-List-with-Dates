@@ -5,7 +5,7 @@ from tkcalendar import Calendar, DateEntry
 
 #create root window
 root = tkinter.Tk()
-root.configure(bg = "White")
+root.configure(bg = "SteelBlue4")
 root.title("ToDo List")
 root.geometry("400x350")
 #create emty list
@@ -81,31 +81,26 @@ def exit():
 root.bind('<Return>', add_task)
 
 # Create title in root widget of GUI with white background
-lbl_title = tkinter.Label(root, text="To-Do-List", bg="white")
-lbl_title.grid(row= 0, column=0 )
-
-lbl_display = tkinter.Label(root, text="", bg="white")
-lbl_display.grid(row=0 , column=1 )
 
 txt_input = tkinter.Entry(root, width = 15)
 txt_input.grid(row=1 , column=1 )
 
-btn_add_task = tkinter.Button(root, text="Add Task", fg="green", bg="white", command=add_task)
+btn_add_task = tkinter.Button(root, text="Add Task", fg="black", bg="SpringGreen3", command=add_task)
 btn_add_task.grid(row= 1, column=0 )
 
-btn_delete_task = tkinter.Button(root, text="Delete Task", fg="green", bg="white", command=delete_task)
+btn_delete_task = tkinter.Button(root, text="Delete Task", fg="black", bg="indianred", command=delete_task)
 btn_delete_task.grid(row=4 , column=0 )
 
-btn_delete_all = tkinter.Button(root, text="Delete All", fg="green", bg="white", command=delete_all)
+btn_delete_all = tkinter.Button(root, text="Delete All", fg="black", bg="indianred", command=delete_all)
 btn_delete_all.grid(row=5 , column= 0)
 
-btn_sort_list_up = tkinter.Button(root, text="Sort List Ascending", fg="green", bg="white", command=sort_list_up)
+btn_sort_list_up = tkinter.Button(root, text="Sort List Ascending", fg="black", bg="LightSkyBlue1", command=sort_list_up)
 btn_sort_list_up.grid(row=6 , column=0 )
 
-btn_sort_list_down = tkinter.Button(root, text="Sort List Descending", fg="green", bg="white", command=sort_list_down)
+btn_sort_list_down = tkinter.Button(root, text="Sort List Descending", fg="black", bg="LightSkyBlue1", command=sort_list_down)
 btn_sort_list_down.grid(row=7 , column=0 )
 
-btn_quit_program = tkinter.Button(root, text="Exit", fg="green", bg="white", command=exit)
+btn_quit_program = tkinter.Button(root, text="Exit", fg="black", bg="white", command=exit)
 btn_quit_program.grid(row=9 , column=0 )
 
 lb_tasks = tkinter.Listbox(root)
@@ -115,7 +110,7 @@ lb_dates = tkinter.Listbox(root)
 lb_dates.grid(row=3 , column=3, rowspan=7 )
 
 #Create calendar selector
-cal = DateEntry(root, width= 12, background= "magenta3", foreground= "white",bd=2)
+cal = DateEntry(root, width= 12, background= "DodgerBlue4", foreground= "white",bd=2)
 cal.grid(row=1, column=3)
 
 # Start the main events loop
