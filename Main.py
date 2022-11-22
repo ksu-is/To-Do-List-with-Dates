@@ -56,14 +56,28 @@ def delete_task():
             tasks.remove(task)
     update_listbox()
 
-
+#sorts dates and tasks by task name
 def sort_list_up():
+    #The dates list needs to be changes globally in response to the sort
+    global dates 
+    #Creates a temporary list of the dates sorted according to the sorted tasks
+    tempdates = [x for _, x in sorted(zip(tasks,dates))]
     tasks.sort()
+    #replaces the global date list with the temporary one created for sorting
+    dates = tempdates
     update_listbox()
 
+#sorts dates and tasks by reverse task name
 def sort_list_down():
+    #The dates list needs to be changes globally in response to the sort
+    global dates
+    #Creates a temporary list of the dates sorted according to the sorted tasks
+    tempdates = [x for _, x in sorted(zip(tasks,dates))]
     tasks.sort()
+    #replaces the global date list with the temporary one created for sorting
+    dates = tempdates
     tasks.reverse()
+    dates.reverse()
     update_listbox()
 
 
