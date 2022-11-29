@@ -80,6 +80,14 @@ def sort_list_down():
     dates.reverse()
     update_listbox()
 
+#sorts the tasks by the date associated with them
+def sort_dates():
+    global tasks
+    temptasks = [x for _, x in sorted(zip(dates,tasks))]
+    dates.sort()
+    tasks = temptasks
+    update_listbox()
+
 
 def delete_all():
     # As list is being changed, it needs to be global.
@@ -114,6 +122,9 @@ btn_sort_list_up.grid(row=6 , column=0 )
 
 btn_sort_list_down = tkinter.Button(root, text="Sort List Descending", fg="black", bg="LightSkyBlue1", command=sort_list_down)
 btn_sort_list_down.grid(row=7 , column=0 )
+
+btn_sort_dates_up = tkinter.Button(root, text="Sort by Date", fg="black", bg="LightSkyBlue1", command=sort_dates)
+btn_sort_dates_up.grid(row=8 , column=0)
 
 btn_quit_program = tkinter.Button(root, text="Exit", fg="black", bg="white", command=exit)
 btn_quit_program.grid(row=9 , column=0 )
