@@ -101,6 +101,12 @@ def delete_all():
       update_listbox()
 
 def exit():
+   # with open ('C:\Users\Alex\Documents\GitHub\To-Do-List-with-Dates\files\tasksfile.txt','w') as tf:
+    #    for task in tasks:
+    #       tf.write("%s\n" % task)
+    #with open ('C:\Users\Alex\Documents\GitHub\To-Do-List-with-Dates\files\datefile.txt','w') as df:
+    #    for date in dates:
+    #        df.write("%s\n" % date)           
     quit()
 
 #Creating and formatting the GUI elemets
@@ -138,6 +144,25 @@ lb_dates.grid(row=3 , column=3, rowspan=7 )
 #Create calendar selector
 cal = DateEntry(root, width= 12, background= "DodgerBlue4", foreground= "white",bd=2)
 cal.grid(row=1, column=3)
+
+#Populate listbox at program start for future file io functionality
+#def show_listbox():
+#    global tasks
+#    global dates
+#    with open ('C:\Users\Alex\Documents\GitHub\To-Do-List-with-Dates\files\tasksfile.txt','r') as tf:
+#        for line in tf:
+#            x = line[:-1]
+#            tasks.append(x)
+#    with open ('C:\Users\Alex\Documents\GitHub\To-Do-List-with-Dates\files\datefile.txt','r') as df:
+#        for line in df:
+#            x = line[:-1]
+#            dates.append(x)
+#    for task in tasks:
+#        lb_tasks.insert("end", task)
+#    for date in dates:
+#        lb_dates.insert("end", date)
+#Populate listbox at program start for future file io functionality
+#show_listbox()
 
 # Start the main events loop
 root.mainloop()
