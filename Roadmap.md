@@ -9,6 +9,8 @@
 - [x] Learn and integrate how to create a calendar selecter using Tkinter
 - [x] Learn and integrate how to assign dates to tasks on the todo list
 - [x] Get Dates to sort with the tasks
-- [ ] Integrate sorting the list by Date
+- [x] Integrate sorting the list by Date
 - [ ] Learn and integrate how to save the state of the todo list
-- [ ] Review code and add additional features considered throughout the process
+- [ ] Prepare splash page for presentation
+- [ ] Prepare presentation
+- [ ] Present project
