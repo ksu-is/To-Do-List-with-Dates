@@ -12,5 +12,5 @@
 - [x] Integrate sorting the list by Date
 - [x] Learn and integrate how to save the state of the todo list
 - [x] Prepare splash page for presentation
-- [ ] Prepare presentation
-- [ ] Present project
+- [x] Prepare presentation
+- [x] Present project

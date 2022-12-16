@@ -92,6 +92,7 @@ def sort_dates():
 def delete_all():
     # As list is being changed, it needs to be global.
     global tasks
+    global dates
     confirm_del = messagebox.askyesno("Delete All Confirmation", "Are you sure you want to delete all tasks?")
     if confirm_del:
       # Clears the lists.
@@ -161,7 +162,7 @@ def show_listbox():
         lb_tasks.insert("end", task)
     for date in dates:
         lb_dates.insert("end", date)
-#Populate listbox at program start for future file io functionality
+
 show_listbox()
 
 # Start the main events loop
